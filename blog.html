@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Whispering Pixel</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .font-serif {
+        font-family: 'Playfair Display', serif;
+      }
+      .gradient-text {
+        background: linear-gradient(90deg, #0ea5e9 0%, #8b5cf6 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .post-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .post-card:hover {
+        transform: translateY(-5px);
+      }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="flex items-center space-x-2">
+        <span class="font-serif text-2xl font-bold gradient-text">Whispering Pixel</span>
+      </a>
+      <div class="hidden md:flex space-x-8">
+        <a href="index.html" class="text-gray-600 hover:text-primary-600 transition">Home</a>
+        <a href="about.html" class="text-gray-600 hover:text-primary-600 transition">About</a>
+        <a href="blog.html" class="text-primary-600 font-medium hover:text-primary-800 transition">Blog</a>
+        <a href="portfolio.html" class="text-gray-600 hover:text-primary-600 transition">Portfolio</a>
+        <a href="contact.html" class="text-gray-600 hover:text-primary-600 transition">Contact</a>
+      </div>
+      <button class="md:hidden focus:outline-none" id="mobile-menu-button">
+        <i data-feather="menu"></i>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div class="md:hidden hidden bg-white py-2 px-4 border-t border-gray-200" id="mobile-menu">
+      <a href="index.html" class="block py-2 text-gray-600 hover:text-primary-600 transition">Home</a>
+      <a href="about.html" class="block py-2 text-gray-600 hover:text-primary-600 transition">About</a>
+      <a href="blog.html" class="block py-2 text-primary-600 font-medium">Blog</a>
+      <a href="portfolio.html" class="block py-2 text-gray-600 hover:text-primary-600 transition">Portfolio</a>
+      <a href="contact.html" class="block py-2 text-gray-600 hover:text-primary-600 transition">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative py-20 bg-gradient-to-br from-primary-500/10 to-secondary-500/10">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="font-serif text-4xl md:text-6xl font-bold mb-6">
+        <span class="gradient-text">Pixel</span> Musings
+      </h1>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Thoughts on design, technology, creativity, and the human experience in the digital age
+      </p>
+    </div>
+  </section>
+
+  <!-- Blog Content -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col lg:flex-row gap-12">
+        <!-- Main Content -->
+        <div class="lg:w-2/3">
+          <!-- Featured Post -->
+          <div class="mb-16">
+            <div class="relative rounded-xl overflow-hidden mb-6">
+              <img src="http://static.photos/technology/1200x630/6" alt="Featured post" class="w-full h-64 md:h-96 object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+              <div class="absolute bottom-0 left-0 p-6 md:p-8">
+                <span class="inline-block px-3 py-1 bg-primary-600 text-white text-sm rounded-full mb-2">Featured</span>
+                <h2 class="text-2xl md:text-3xl font-bold text-white">
+                  <a href="post1.html">The Future of Web Design: Beyond the Screen</a>
+                </h2>
+                <p class="text-gray-200 mt-2">Exploring emerging technologies that will reshape how we interact with digital content</p>
+              </div>
+            </div>
+            <div class="flex items-center text-sm text-gray-500 mb-4">
+              <span>May 20, 2023</span>
+              <span class="mx-2">•</span>
+              <span>10 min read</span>
+              <span class="mx-2">•</span>
+              <span>3 comments</span>
+            </div>
+            <p class="text-gray-700 mb-6">
+              As we stand on the brink of a new era in digital interaction, the boundaries between physical and virtual spaces continue to blur. This essay explores how technologies like augmented reality, voice interfaces, and spatial computing are challenging our traditional notions of web design...
+            </p>
+            <a href="post1.html" class="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium">
+              Continue reading
+              <i data-feather="arrow-right" class="w-4 h-4 ml-1"></i>
+            </a>
+          </div>
+
+          <!-- Blog Posts Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Post 1 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-md post-card">
+              <img src="http://static.photos/minimal/1024x576/7" alt="Minimal design" class="w-full h-48 object-cover">
+              <div class="p-6">
+                <div class="flex items-center text-sm text-gray-500 mb-2">
+                  <span>May 18, 2023</span>
+                  <span class="mx-2">•</span>
+                  <span>6 min read</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2 hover:text-primary-600 transition">
+                  <a href="post2.html">The Power of Negative Space</a>
+                </h3>
+                <p class="text-gray-600 mb-4">How embracing emptiness can create more impactful designs and clearer communication.</p>
+                <a href="post2.html" class="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium">
+                  Read more
+                  <i data-feather="arrow-right" class="w-4 h-4 ml-1"></i>
+                </a>
+              </div>
+            </div>
+            <!-- Post 2 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-md post-card">
+              <img src="http://static.photos/office/1024x576/8" alt="Creative process" class="w-full h-48 object-cover">
+              <div class="p-6">
+                <div class="flex items-center text-sm text-gray-500 mb-2">
+                  <span>May 15, 2023</span>
+                  <span class="mx-2">•</span>
+                  <span>8 min read</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2 hover:text-primary-600 transition">
+                  <a href="post3.html">Rethinking Productivity in Creative Work</a>
+                </h3>
+                <p class="text-gray-600 mb-4">Why traditional productivity metrics often fail creative professionals and what to measure instead.</p>
+                <a href="post3.html" class="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium">
+                  Read more
+                  <i data-feather="arrow-right" class="w-4 h-4 ml-1"></i>
+                </a>
+              </div>
+            </div>
+            <!-- Post 3 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-md post-card">
+              <img src="http://static.photos/abstract/1024x576/9" alt="Color theory" class="w-full h-48 object-cover">
+              <div class="p-6">
+                <div class="flex items-center text-sm text-gray-500 mb-2">
+                  <span>May 12, 2023</span>
+                  <span class="mx-2">•</span>
+                  <span>5 min read</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2 hover:text-primary-600 transition">
+                  <a href="post4.html">Color Psychology in Digital Interfaces</a>
+                </h3>
+                <p class="text-gray-600 mb-4">How color choices affect user emotions, perceptions, and behavior in digital products.</p>
+                <a href="post4.html" class="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium">
+                  Read more
+                  <i data-feather="arrow-right" class="w-4 h-4 ml-1"></i>
+                </a>
+              </div>
+            </div>
+            <!-- Post 4 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-md post-card">
+              <img src="http://static.photos/workspace/1024x576/10" alt="Remote work" class="w-full h-48 object-cover">
+              <div class="p-6">
+                <div class="flex items-center text-sm text-gray-500 mb-2">
+                  <span>May 8, 2023</span>
+                  <span class="mx-2">•</span>
+                  <span>7 min read</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2 hover:text-primary-600 transition">
+                  <a href="post5.html">Building a Sustainable Remote Work Routine</a>
+                </h3>
+                <p class="text-gray-600 mb-4">Lessons from three years of working remotely as a designer and developer.</p>
+                <a href="post5.html" class="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium">
+                  Read more
+                  <i data-feather="arrow-right" class="w-4 h-4 ml-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <div class="mt-12 flex justify-center">
+            <nav class="flex items-center space-x-2">
+              <a href="#" class="px-4 py-2 border border-gray-300 rounded-md text-gray-600 hover:bg-gray-100 transition">
+                <i data-feather="chevron-left" class="w-4 h-4"></i>
+              </a>
+              <a href="#" class="px-4 py-2 bg-primary-600 text-white rounded-md">1</a>
+              <a href="#" class="px-4 py-2 border border-gray-300 rounded-md text-gray-600 hover:bg-gray-100 transition">2</a>
+              <a href="#" class="px-4 py-2 border border-gray-300 rounded-md text-gray-600 hover:bg-gray-100 transition">3</a>
+              <span class="px-4 py-2 text-gray-500">...</span>
+              <a href="#" class="px-4 py-2 border border-gray-300 rounded-md text-gray-600 hover:bg-gray-100 transition">8</a>
+              <a href="#" class="px-4 py-2 border border-gray-300 rounded-md text-gray-600 hover:bg-gray-100 transition">
+                <i data-feather="chevron-right" class="w-4 h-4"></i>
+              </a>
+            </nav>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="lg:w-1/3">
+          <!-- About Widget -->
+          <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+            <div class="flex items-center mb-4">
+              <img src="http://static.photos/people/200x200/11" alt="Pixel" class="w-16 h-16 rounded-full mr-4">
+              <div>
+                <h3 class="font-bold">Pixel Whisperer</h3>
+                <p class="text-sm text-gray-600">Digital Designer & Writer</p>
+              </div>
+            </div>
+            <p class="text-gray-700 mb-4">
+              I write about design, technology, and the creative process. Join me as I explore the intersection of digital and human experiences.
+            </p>
+            <a href="about.html" class="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium">
+              More about me
+              <i data-feather="arrow-right" class="w-4 h-4 ml-1"></i>
+            </a>
+          </div>
+
+          <!-- Categories Widget -->
+          <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+            <h3 class="font-bold text-lg mb-4">Categories</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="flex justify-between items-center text-gray-600 hover:text-primary-600 transition">
+                  <span>Design</span>
+                  <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">12</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex justify-between items-center text-gray-600 hover:text-primary-600 transition">
+                  <span>Technology</span>
+                  <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">8</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex justify-between items-center text-gray-600 hover:text-primary-600 transition">
+                  <span>Creativity</span>
+                  <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">15</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex justify-between items-center text-gray-600 hover:text-primary-600 transition">
+                  <span>Workflow</span>
+                  <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">6</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex justify-between items-center text-gray-600 hover:text-primary-600 transition">
+                  <span>Mindfulness</span>
+                  <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">9</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Popular Posts -->
+          <div class="bg-white rounded-xl shadow-md p-6">
+            <h3 class="font-bold text-lg mb-4">Popular Posts</h3>
+            <div class="space-y-4">
+              <a href="#" class="flex items-start group">
+                <img src="http://static.photos/minimal/200x200/12" alt="Popular post" class="w-16 h-16 rounded-md object-cover mr-4">
+                <div>
+                  <h4 class="font-medium text-gray-800 group-hover:text-primary-600 transition">The Zen of CSS</h4>
+                  <p class="text-sm text-gray-500">May 2, 2023</p>
+                </div>
+              </a>
+              <a href="#" class="flex items-start group">
+                <img src="http://static.photos/technology/200x200/13" alt="Popular post" class="w-16 h-16 rounded-md object-cover mr-4">
+                <div>
+                  <h4 class="font-medium text-gray-800 group-hover:text-primary-600 transition">Why I Switched to VS Code</h4>
+                  <p class="text-sm text-gray-500">April 25, 2023</p>
+                </div>
+              </a>
+              <a href="#" class="flex items-start group">
+                <img src="http://static.photos/workspace/200x200/14" alt="Popular post" class="w-16 h-16 rounded-md object-cover mr-4">
+                <div>
+                  <h4 class="font-medium text-gray-800 group-hover:text-primary-600 transition">My Daily Design Rituals</h4>
+                  <p class="text-sm text-gray-500">April 18, 2023</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="py-16 bg-gradient-to-r from-primary-500 to-secondary-500">
+    <div class="container mx-auto px-4 max-w-4xl text-center">
+      <h2 class="font-serif text-3xl text-white font-bold mb-4">Join the Conversation</h2>
+      <p class="text-primary-100 mb-8 max-w-2xl mx-auto">
+        Subscribe to get my latest essays, insights, and occasional surprises directly to your inbox.
+      </p>
+      <form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+        <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent">
+        <button type="submit" class="px-6 py-3 bg-white text-primary-600 rounded-lg font-medium hover:bg-gray-100 transition">
+          Subscribe
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="font-serif text-xl font-bold mb-4">Whispering Pixel</h3>
+          <p class="text-gray-400">
+            A digital journal of creativity, design, and mindful technology.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Explore</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+            <li><a href="about.html" class="text-gray-400 hover:text-white transition">About</a></li>
+            <li><a href="blog.html" class="text-gray-400 hover:text-white transition">Blog</a></li>
+            <li><a href="portfolio.html" class="text-gray-400 hover:text-white transition">Portfolio</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Connect</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Twitter</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Instagram</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">LinkedIn</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">GitHub</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Legal</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Use</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+        <p>© 2023 Whispering Pixel. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+
+    // Feather icons
+    feather.replace();
+  </script>
+</body>
+</html>

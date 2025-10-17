@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Whispering Pixel</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .font-serif {
+        font-family: 'Playfair Display', serif;
+      }
+      .gradient-text {
+        background: linear-gradient(90deg, #0ea5e9 0%, #8b5cf6 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .contact-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .contact-card:hover {
+        transform: translateY(-5px);
+      }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="flex items-center space-x-2">
+        <span class="font-serif text-2xl font-bold gradient-text">Whispering Pixel</span>
+      </a>
+      <div class="hidden md:flex space-x-8">
+        <a href="index.html" class="text-gray-600 hover:text-primary-600 transition">Home</a>
+        <a href="about.html" class="text-gray-600 hover:text-primary-600 transition">About</a>
+        <a href="blog.html" class="text-gray-600 hover:text-primary-600 transition">Blog</a>
+        <a href="portfolio.html" class="text-gray-600 hover:text-primary-600 transition">Portfolio</a>
+        <a href="contact.html" class="text-primary-600 font-medium hover:text-primary-800 transition">Contact</a>
+      </div>
+      <button class="md:hidden focus:outline-none" id="mobile-menu-button">
+        <i data-feather="menu"></i>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div class="md:hidden hidden bg-white py-2 px-4 border-t border-gray-200" id="mobile-menu">
+      <a href="index.html" class="block py-2 text-gray-600 hover:text-primary-600 transition">Home</a>
+      <a href="about.html" class="block py-2 text-gray-600 hover:text-primary-600 transition">About</a>
+      <a href="blog.html" class="block py-2 text-gray-600 hover:text-primary-600 transition">Blog</a>
+      <a href="portfolio.html" class="block py-2 text-gray-600 hover:text-primary-600 transition">Portfolio</a>
+      <a href="contact.html" class="block py-2 text-primary-600 font-medium">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative py-20 bg-gradient-to-br from-primary-500/10 to-secondary-500/10">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="font-serif text-4xl md:text-6xl font-bold mb-6">
+        Let's <span class="gradient-text">Connect</span>
+      </h1>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Whether you have a project in mind or just want to say hello, I'd love to hear from you
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Content -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col lg:flex-row gap-12">
+        <!-- Contact Form -->
+        <div class="lg:w-2/3">
+          <div class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+            <h2 class="font-serif text-2xl font-bold mb-6">Send Me a Message</h2>
+            <form>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                  <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+                </div>
+                <div>
+                  <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                  <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+                </div>
+              </div>
+              <div class="mb-6">
+                <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                <input type="text" id="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+              </div>
+              <div class="mb-6">
+                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                <textarea id="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"></textarea>
+              </div>
+              <button type="submit" class="w-full px-6 py-3 bg-primary-600 text-white rounded-lg font-medium hover:bg-primary-700 transition">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="lg:w-1/3">
+          <div class="space-y-6">
+            <!-- Contact Card 1 -->
+            <div class="contact-card bg-white rounded-xl shadow-lg p-6">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center mr-4">
+                  <i data-feather="mail" class="text-primary-600 w-5 h-5"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-lg">Email</h3>
+                  <p class="text-gray-600">hello@whisperingpixel.com</p>
+                </div>
+              </div>
+              <a href="mailto:hello@whisperingpixel.com" class="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium">
+                Send an email
+                <i data-feather="arrow-right" class="w-4 h-4 ml-1"></i>
+              </a>
+            </div>
+
+            <!-- Contact Card 2 -->
+            <div class="contact-card bg-white rounded-xl shadow-lg p-6">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 rounded-full bg-secondary-100 flex items-center justify-center mr-4">
+                  <i data-feather="phone" class="text-secondary-600 w-5 h-5"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-lg">Phone</h3>
+                  <p class="text-gray-600">+1 (555) 123-4567</p>
+                </div>
+              </div>
+              <a href="tel:+15551234567" class="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium">
+                Call me
+                <i data-feather="arrow-right" class="w-4 h-4 ml-1"></i>
+              </a>
+            </div>
+
+            <!-- Contact Card 3 -->
+            <div class="contact-card bg-white rounded-xl shadow-lg p-6">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center mr-4">
+                  <i data-feather="map-pin" class="text-primary-600 w-5 h-5"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-lg">Location</h3>
+                  <p class="text-gray-600">San Francisco, CA</p>
+                </div>
+              </div>
+              <a href="#" class="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium">
+                View on map
+                <i data-feather="arrow-right" class="w-4 h-4 ml-1"></i>
+              </a>
+            </div>
+
+            <!-- Social Links -->
+            <div class="bg-white rounded-xl shadow-lg p-6">
+              <h3 class="font-bold text-lg mb-4">Follow Me</h3>
+              <div class="flex space-x-4">
+                <a href="#" class="w-10 h-10 rounded-full bg-gray-100 hover:bg-primary-100 flex items-center justify-center transition">
+                  <i data-feather="twitter" class="text-gray-600 hover:text-primary-600 transition"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-gray-100 hover:bg-primary-100 flex items-center justify-center transition">
+                  <i data-feather="instagram" class="text-gray-600 hover:text-primary-600 transition"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-gray-100 hover:bg-primary-100 flex items-center justify-center transition">
+                  <i data-feather="linkedin" class="text-gray-600 hover:text-primary-600 transition"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-gray-100 hover:bg-primary-100 flex items-center justify-center transition">
+                  <i data-feather="github" class="text-gray-600 hover:text-primary-600 transition"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="font-serif text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+        <div class="w-20 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto"></div>
+      </div>
+      <div class="max-w-3xl mx-auto">
+        <!-- FAQ Item 1 -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden mb-4">
+          <button class="w-full flex justify-between items-center p-6 focus:outline-none">
+            <h3 class="font-medium text-left">What types of projects do you take on?</h3>
+            <i data-feather="chevron-down" class="text-gray-500 w-5 h-5"></i>
+          </button>
+          <div class="px-6 pb-6 hidden">
+            <p class="text-gray-600">I specialize in UI/UX design, web development, and branding projects for businesses and individuals who value thoughtful, intentional design. My sweet spot is working with clients who need a complete visual identity or digital product design.</p>
+          </div>
+        </div>
+        <!-- FAQ Item 2 -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden mb-4">
+          <button class="w-full flex justify-between items-center p-6 focus:outline-none">
+            <h3 class="font-medium text-left">What is your typical turnaround time?</h3>
+            <i data-feather="chevron-down" class="text-gray-500 w-5 h-5"></i>
+          </button>
+          <div class="px-6 pb-6 hidden">
+            <p class="text-gray-600">The timeline for each project depends on the scope and complexity. A typical website redesign might take 4-6 weeks from discovery to launch, while a branding project could take 6-8 weeks. I'll provide a detailed timeline during our initial consultation.</p>
+          </div>
+        </div>
+        <!-- FAQ Item 3 -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden mb-4">
+          <button class="w-full flex justify-between items-center p-6 focus:outline-none">
+            <h3 class="font-medium text-left">How do you charge for projects?</h3>
+            <i data-feather="chevron-down" class="text-gray-500 w-5 h-5"></i>
+          </button>
+          <div class="px-6 pb-6 hidden">
+            <p class="text-gray-600">I typically work on a project-based fee rather than hourly rates. After discussing your project needs, I'll provide a detailed proposal with a fixed price quote. This allows for clear budgeting and eliminates any surprises.</p>
+          </div>
+        </div>
+        <!-- FAQ Item 4 -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+          <button class="w-full flex justify-between items-center p-6 focus:outline-none">
+            <h3 class="font-medium text-left">What if I need ongoing support after launch?</h3>
+            <i data-feather="chevron-down" class="text-gray-500 w-5 h-5"></i>
+          </button>
+          <div class="px-6 pb-6 hidden">
+            <p class="text-gray-600">I offer retainer agreements for clients who need ongoing design or development support. We can discuss a plan that fits your needs, whether it's a set number of hours per month or ad-hoc support as needed.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="font-serif text-xl font-bold mb-4">Whispering Pixel</h3>
+          <p class="text-gray-400">
+            A digital journal of creativity, design, and mindful technology.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Explore</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+            <li><a href="about.html" class="text-gray-400 hover:text-white transition">About</a></li>
+            <li><a href="blog.html" class="text-gray-400 hover:text-white transition">Blog</a></li>
+            <li><a href="portfolio.html" class="text-gray-400 hover:text-white transition">Portfolio</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Connect</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Twitter</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Instagram</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">LinkedIn</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">GitHub</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Legal</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Use</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+        <p>© 2023 Whispering Pixel. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.bg-white button').forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        const icon = button.querySelector('i');
+        
+        content.classList.toggle('hidden');
+        icon.classList.toggle('rotate-180');
+      });
+    });
+
+    // Feather icons
+    feather.replace();
+  </script>
+</body>
+</html>

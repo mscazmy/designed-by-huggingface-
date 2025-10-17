@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Whispering Pixel</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .font-serif {
+        font-family: 'Playfair Display', serif;
+      }
+      .gradient-text {
+        background: linear-gradient(90deg, #0ea5e9 0%, #8b5cf6 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="flex items-center space-x-2">
+        <span class="font-serif text-2xl font-bold gradient-text">Whispering Pixel</span>
+      </a>
+      <div class="hidden md:flex space-x-8">
+        <a href="index.html" class="text-gray-600 hover:text-primary-600 transition">Home</a>
+        <a href="about.html" class="text-primary-600 font-medium hover:text-primary-800 transition">About</a>
+        <a href="blog.html" class="text-gray-600 hover:text-primary-600 transition">Blog</a>
+        <a href="portfolio.html" class="text-gray-600 hover:text-primary-600 transition">Portfolio</a>
+        <a href="contact.html" class="text-gray-600 hover:text-primary-600 transition">Contact</a>
+      </div>
+      <button class="md:hidden focus:outline-none" id="mobile-menu-button">
+        <i data-feather="menu"></i>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div class="md:hidden hidden bg-white py-2 px-4 border-t border-gray-200" id="mobile-menu">
+      <a href="index.html" class="block py-2 text-gray-600 hover:text-primary-600 transition">Home</a>
+      <a href="about.html" class="block py-2 text-primary-600 font-medium">About</a>
+      <a href="blog.html" class="block py-2 text-gray-600 hover:text-primary-600 transition">Blog</a>
+      <a href="portfolio.html" class="block py-2 text-gray-600 hover:text-primary-600 transition">Portfolio</a>
+      <a href="contact.html" class="block py-2 text-gray-600 hover:text-primary-600 transition">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative py-20 bg-gradient-to-br from-primary-50 to-secondary-50">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="font-serif text-4xl md:text-6xl font-bold mb-6">
+        <span class="gradient-text">About</span> Me
+      </h1>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Designer, writer, and digital explorer on a journey to find beauty in pixels and meaning in code
+      </p>
+    </div>
+  </section>
+
+  <!-- About Content -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <div class="lg:w-1/3">
+          <div class="relative">
+            <div class="absolute -inset-4 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-2xl blur opacity-75"></div>
+            <img src="http://static.photos/people/640x360/5" alt="Profile" class="relative rounded-2xl w-full shadow-xl">
+          </div>
+        </div>
+        <div class="lg:w-2/3">
+          <h2 class="font-serif text-3xl font-bold mb-6">Hello, I'm Pixel</h2>
+          <p class="text-lg text-gray-700 mb-6">
+            I'm a multidisciplinary creative with a passion for design, technology, and storytelling. Over the past decade, I've worked with startups, agencies, and global brands to craft digital experiences that resonate with users and stand the test of time.
+          </p>
+          <p class="text-lg text-gray-700 mb-6">
+            My journey began in graphic design but quickly expanded into web development, user experience, and content creation. I believe that the most powerful digital experiences emerge from the intersection of aesthetics, functionality, and human psychology.
+          </p>
+          <p class="text-lg text-gray-700 mb-8">
+            When I'm not designing or coding, you'll find me writing about creativity, digital minimalism, and the evolving relationship between humans and technology.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="portfolio.html" class="px-6 py-3 bg-primary-600 text-white rounded-full font-medium hover:bg-primary-700 transition shadow-lg hover:shadow-primary-500/30">
+              View My Work
+            </a>
+            <a href="contact.html" class="px-6 py-3 border border-primary-600 text-primary-600 rounded-full font-medium hover:bg-primary-50 transition">
+              Get In Touch
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills & Expertise -->
+  <section class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="font-serif text-3xl font-bold mb-4">Skills & Expertise</h2>
+        <div class="w-20 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+            <i data-feather="pen-tool" class="text-primary-600 w-6 h-6"></i>
+          </div>
+          <h3 class="font-bold text-xl mb-2">UI/UX Design</h3>
+          <p class="text-gray-600">Creating intuitive, beautiful interfaces that users love to interact with.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-secondary-100 rounded-full flex items-center justify-center mb-4">
+            <i data-feather="code" class="text-secondary-600 w-6 h-6"></i>
+          </div>
+          <h3 class="font-bold text-xl mb-2">Front-End Dev</h3>
+          <p class="text-gray-600">Turning designs into functional, responsive websites and applications.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mb-4">
+            <i data-feather="edit" class="text-primary-600 w-6 h-6"></i>
+          </div>
+          <h3 class="font-bold text-xl mb-2">Content Creation</h3>
+          <p class="text-gray-600">Crafting compelling narratives and engaging copy for digital platforms.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-secondary-100 rounded-full flex items-center justify-center mb-4">
+            <i data-feather="users" class="text-secondary-600 w-6 h-6"></i>
+          </div>
+          <h3 class="font-bold text-xl mb-2">Digital Strategy</h3>
+          <p class="text-gray-600">Developing comprehensive plans for digital presence and growth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <div class="text-center mb-12">
+        <h2 class="font-serif text-3xl font-bold mb-4">My Design Philosophy</h2>
+        <div class="w-20 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto"></div>
+      </div>
+      <div class="prose prose-lg text-gray-700 mx-auto">
+        <blockquote class="border-l-4 border-primary-500 pl-6 italic text-xl text-gray-700 mb-8">
+          "Good design is as little design as possible. Less, but better."
+        </blockquote>
+        <p class="mb-6">
+          I believe in the power of simplicity and intentionality. Every pixel, every line of code, every word should serve a purpose. In a world of digital noise, clarity becomes the ultimate sophistication.
+        </p>
+        <p class="mb-6">
+          My approach combines aesthetic sensibility with functional pragmatism. I start by understanding the core problem, then iterate towards solutions that are both beautiful and effective. The best designs emerge from constraints, not from unlimited possibilities.
+        </p>
+        <p>
+          Technology should serve human needs, not the other way around. I'm passionate about creating digital experiences that empower users rather than exploit them, that add value to their lives rather than consume their attention.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="font-serif text-xl font-bold mb-4">Whispering Pixel</h3>
+          <p class="text-gray-400">
+            A digital journal of creativity, design, and mindful technology.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Explore</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+            <li><a href="about.html" class="text-gray-400 hover:text-white transition">About</a></li>
+            <li><a href="blog.html" class="text-gray-400 hover:text-white transition">Blog</a></li>
+            <li><a href="portfolio.html" class="text-gray-400 hover:text-white transition">Portfolio</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Connect</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Twitter</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Instagram</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">LinkedIn</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">GitHub</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Legal</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Use</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+        <p>© 2023 Whispering Pixel. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+
+    // Feather icons
+    feather.replace();
+  </script>
+</body>
+</html>

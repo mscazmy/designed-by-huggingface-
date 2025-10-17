@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Whispering Pixel</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .font-serif {
+        font-family: 'Playfair Display', serif;
+      }
+      .gradient-text {
+        background: linear-gradient(90deg, #0ea5e9 0%, #8b5cf6 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .project-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .project-card:hover {
+        transform: translateY(-5px);
+      }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="flex items-center space-x-2">
+        <span class="font-serif text-2xl font-bold gradient-text">Whispering Pixel</span>
+      </a>
+      <div class="hidden md:flex space-x-8">
+        <a href="index.html" class="text-gray-600 hover:text-primary-600 transition">Home</a>
+        <a href="about.html" class="text-gray-600 hover:text-primary-600 transition">About</a>
+        <a href="blog.html" class="text-gray-600 hover:text-primary-600 transition">Blog</a>
+        <a href="portfolio.html" class="text-primary-600 font-medium hover:text-primary-800 transition">Portfolio</a>
+        <a href="contact.html" class="text-gray-600 hover:text-primary-600 transition">Contact</a>
+      </div>
+      <button class="md:hidden focus:outline-none" id="mobile-menu-button">
+        <i data-feather="menu"></i>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div class="md:hidden hidden bg-white py-2 px-4 border-t border-gray-200" id="mobile-menu">
+      <a href="index.html" class="block py-2 text-gray-600 hover:text-primary-600 transition">Home</a>
+      <a href="about.html" class="block py-2 text-gray-600 hover:text-primary-600 transition">About</a>
+      <a href="blog.html" class="block py-2 text-gray-600 hover:text-primary-600 transition">Blog</a>
+      <a href="portfolio.html" class="block py-2 text-primary-600 font-medium">Portfolio</a>
+      <a href="contact.html" class="block py-2 text-gray-600 hover:text-primary-600 transition">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative py-20 bg-gradient-to-br from-primary-50 to-secondary-50">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="font-serif text-4xl md:text-6xl font-bold mb-6">
+        My <span class="gradient-text">Work</span>
+      </h1>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Selected projects that showcase my design philosophy and technical expertise
+      </p>
+    </div>
+  </section>
+
+  <!-- Portfolio Content -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <!-- Filter Buttons -->
+      <div class="flex flex-wrap justify-center gap-2 mb-12">
+        <button class="px-4 py-2 bg-primary-600 text-white rounded-full font-medium">All</button>
+        <button class="px-4 py-2 border border-gray-300 text-gray-600 hover:bg-gray-100 rounded-full transition">Web Design</button>
+        <button class="px-4 py-2 border border-gray-300 text-gray-600 hover:bg-gray-100 rounded-full transition">UI/UX</button>
+        <button class="px-4 py-2 border border-gray-300 text-gray-600 hover:bg-gray-100 rounded-full transition">Branding</button>
+        <button class="px-4 py-2 border border-gray-300 text-gray-600 hover:bg-gray-100 rounded-full transition">Development</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project 1 -->
+        <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl">
+          <img src="http://static.photos/technology/1024x576/15" alt="Project 1" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="px-2 py-1 bg-primary-100 text-primary-800 text-xs rounded-full">UI/UX</span>
+              <span class="px-2 py-1 bg-secondary-100 text-secondary-800 text-xs rounded-full">Web</span>
+            </div>
+            <h3 class="text-xl font-bold mb-2 hover:text-primary-600 transition">
+              <a href="project1.html">E-commerce Platform Redesign</a>
+            </h3>
+            <p class="text-gray-600 mb-4">Complete redesign of checkout flow resulting in 35% increase in conversions.</p>
+            <a href="project1.html" class="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium">
+              View Project
+              <i data-feather="arrow-right" class="w-4 h-4 ml-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl">
+          <img src="http://static.photos/workspace/1024x576/16" alt="Project 2" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="px-2 py-1 bg-primary-100 text-primary-800 text-xs rounded-full">Branding</span>
+            </div>
+            <h3 class="text-xl font-bold mb-2 hover:text-primary-600 transition">
+              <a href="project2.html">Startup Brand Identity</a>
+            </h3>
+            <p class="text-gray-600 mb-4">Comprehensive visual identity system for tech startup including logo, color palette, and typography.</p>
+            <a href="project2.html" class="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium">
+              View Project
+              <i data-feather="arrow-right" class="w-4 h-4 ml-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl">
+          <img src="http://static.photos/office/1024x576/17" alt="Project 3" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="px-2 py-1 bg-primary-100 text-primary-800 text-xs rounded-full">UI/UX</span>
+              <span class="px-2 py-1 bg-secondary-100 text-secondary-800 text-xs rounded-full">Mobile</span>
+            </div>
+            <h3 class="text-xl font-bold mb-2 hover:text-primary-600 transition">
+              <a href="project3.html">Fitness App Design</a>
+            </h3>
+            <p class="text-gray-600 mb-4">Mobile application designed to help users track workouts and nutrition with minimal friction.</p>
+            <a href="project3.html" class="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium">
+              View Project
+              <i data-feather="arrow-right" class="w-4 h-4 ml-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl">
+          <img src="http://static.photos/tech/1024x576/18" alt="Project 4" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="px-2 py-1 bg-primary-100 text-primary-800 text-xs rounded-full">Web</span>
+              <span class="px-2 py-1 bg-secondary-100 text-secondary-800 text-xs rounded-full">Development</span>
+            </div>
+            <h3 class="text-xl font-bold mb-2 hover:text-primary-600 transition">
+              <a href="project4.html">Custom CMS Development</a>
+            </h3>
+            <p class="text-gray-600 mb-4">Tailored content management system for publishing house with custom workflows.</p>
+            <a href="project4.html" class="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium">
+              View Project
+              <i data-feather="arrow-right" class="w-4 h-4 ml-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl">
+          <img src="http://static.photos/minimal/1024x576/19" alt="Project 5" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="px-2 py-1 bg-primary-100 text-primary-800 text-xs rounded-full">UI/UX</span>
+              <span class="px-2 py-1 bg-secondary-100 text-secondary-800 text-xs rounded-full">Web</span>
+            </div>
+            <h3 class="text-xl font-bold mb-2 hover:text-primary-600 transition">
+              <a href="project5.html">Dashboard Interface</a>
+            </h3>
+            <p class="text-gray-600 mb-4">Data visualization dashboard for financial analytics platform with custom chart components.</p>
+            <a href="project5.html" class="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium">
+              View Project
+              <i data-feather="arrow-right" class="w-4 h-4 ml-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl">
+          <img src="http://static.photos/abstract/1024x576/20" alt="Project 6" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="px-2 py-1 bg-primary-100 text-primary-800 text-xs rounded-full">Branding</span>
+              <span class="px-2 py-1 bg-secondary-100 text-secondary-800 text-xs rounded-full">Print</span>
+            </div>
+            <h3 class="text-xl font-bold mb-2 hover:text-primary-600 transition">
+              <a href="project6.html">Coffee Shop Identity</a>
+            </h3>
+            <p class="text-gray-600 mb-4">Complete branding package including packaging, signage, and marketing materials.</p>
+            <a href="project6.html" class="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium">
+              View Project
+              <i data-feather="arrow-right" class="w-4 h-4 ml-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-16 text-center">
+        <h3 class="font-serif text-2xl font-bold mb-4">Want to work together?</h3>
+        <p class="text-gray-600 max-w-2xl mx-auto mb-6">I'm currently available for select freelance projects. Let's create something meaningful together.</p>
+        <a href="contact.html" class="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-full font-medium hover:bg-primary-700 transition shadow-lg hover:shadow-primary-500/30">
+          Get In Touch
+          <i data-feather="arrow-right" class="w-4 h-4 ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="font-serif text-xl font-bold mb-4">Whispering Pixel</h3>
+          <p class="text-gray-400">
+            A digital journal of creativity, design, and mindful technology.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Explore</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+            <li><a href="about.html" class="text-gray-400 hover:text-white transition">About</a></li>
+            <li><a href="blog.html" class="text-gray-400 hover:text-white transition">Blog</a></li>
+            <li><a href="portfolio.html" class="text-gray-400 hover:text-white transition">Portfolio</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Connect</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Twitter</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Instagram</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">LinkedIn</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">GitHub</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Legal</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Use</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+        <p>© 2023 Whispering Pixel. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+
+    // Feather icons
+    feather.replace();
+  </script>
+</body>
+</html>
